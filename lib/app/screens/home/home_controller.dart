@@ -18,10 +18,7 @@ class HomeController extends Controller {
   }
 
   @override
-  set context(BuildContext context) {
-    log("context");
-    _context ??= context;
-  }
+  set context(BuildContext context) => _context ??= context;
 
   @override
   void dispose() {
