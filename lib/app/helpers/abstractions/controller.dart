@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 abstract class Controller {
   // Set context.
   set context(BuildContext context);
-  // Build is executed before rendering the screen, just once.
-  void build();
+  // Init is executed before rendering the screen, just once.
+  void init();
   // Builded is executed after rendering the screen, just once.
   void builded();
   // Dipose is executed on closing the screen.

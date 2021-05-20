@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart' show BuildContext;
-import 'package:mytickets/app/helpers/arquitecture/abstracts.dart';
+import 'package:mytickets/app/helpers/abstractions/controller.dart';
 
 class HomeController extends Controller {
 
@@ -8,7 +8,7 @@ class HomeController extends Controller {
   void log(String message) => print("[ Home Controller ]: $message");
 
   @override
-  void build() {
+  void init() {
     log("build");
   }
 

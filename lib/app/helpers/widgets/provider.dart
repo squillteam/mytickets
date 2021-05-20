@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mytickets/app/helpers/arquitecture/abstracts.dart' show Controller;
+import 'package:mytickets/app/helpers/abstractions/controller.dart';
 
 typedef Screen = Widget Function(); 
 
@@ -41,7 +41,7 @@ class _ProviderState extends State<Provider> {
     super.initState();
 
     controller.context = context;
-    controller.build();
+    controller.init();
 
     WidgetsBinding.instance!.addPostFrameCallback((Duration timeStamp) {
       controller.builded();
