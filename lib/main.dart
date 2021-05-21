@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mytickets/app/helpers/dimensions.dart';
 import 'package:mytickets/app/screens/home/home_screen.dart';
 
 void main() {
@@ -16,7 +17,12 @@ class Application extends StatelessWidget {
       ),
       initialRoute: HomeScreen.routeName,
       routes: {
-        HomeScreen.routeName: (BuildContext context) => HomeScreen()
+        HomeScreen.routeName: (BuildContext context) {
+          // Configure dimensions
+          Dimensions.config(context);
+          // Return screem
+          return HomeScreen();
+        }
       },
     );
   }
