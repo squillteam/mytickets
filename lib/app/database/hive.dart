@@ -1,7 +1,9 @@
 /// Standard package
 import 'dart:io' show Directory;
+/// Internal package
+import 'package:mytickets/app/database/hive_adapters.dart';
 /// External packages
-import 'package:hive/hive.dart' show Hive, Box;
+import 'package:hive/hive.dart' show Hive, Box, TypeAdapter;
 import 'package:path_provider/path_provider.dart' show getApplicationDocumentsDirectory;
 
 /// Hive Database
@@ -25,6 +27,12 @@ class HiveDatabase {
     Directory directory = await getApplicationDocumentsDirectory();
     // Initializing
     Hive.init(directory.path);
+
+    // Verify that type adapters are registered
+    typeAdapters.forEach((TypeAdapter<dynamic> typeAdapter) {
+      if(!Hive.isAdapterRegistered(typeAdapter.typeId)) Hive.registerAdapter(typeAdapter);
+    });
+
     // Hive db initlized 
     _initialized = true;
   }
