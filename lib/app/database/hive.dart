@@ -1,8 +1,8 @@
 /// Standard package
-import 'dart:io';
+import 'dart:io' show Directory;
 /// External packages
-import 'package:hive/hive.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:hive/hive.dart' show Hive, Box;
+import 'package:path_provider/path_provider.dart' show getApplicationDocumentsDirectory;
 
 /// Hive Database
 class HiveDatabase {
