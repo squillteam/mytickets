@@ -1,13 +1,14 @@
+/// External package
 import 'package:flutter/material.dart';
+/// Internal packages
 import 'package:mytickets/app/helpers/dimensions.dart';
 import 'package:mytickets/app/screens/add_ticket/add_ticket_screen.dart';
 import 'package:mytickets/app/screens/home/home_screen.dart';
 import 'package:mytickets/app/screens/ticket/ticket_screen.dart';
 
-void main() {
-  runApp(Application());
-}
+void main() => runApp(Application());
 
+/// Application
 class Application extends StatelessWidget {
   // This widget is the root of your application.
   @override
