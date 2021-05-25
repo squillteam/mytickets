@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mytickets/app/database/models/invoice_data.dart';
+import 'package:mytickets/app/models/invoice_data.dart';
 
 void main() {
   group("Testing data models", () {

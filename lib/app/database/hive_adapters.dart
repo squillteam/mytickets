@@ -1,7 +1,7 @@
 /// External package
 import 'package:hive/hive.dart' show TypeAdapter, BinaryReader, BinaryWriter;
 /// Internal package
-import 'package:mytickets/app/database/models/invoice_data.dart';
+import 'package:mytickets/app/models/invoice_data.dart';
 
 final List<TypeAdapter<dynamic>> typeAdapters = [
   _InvoiceTypeAdapter()
