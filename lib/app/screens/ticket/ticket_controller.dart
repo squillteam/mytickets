@@ -8,23 +8,22 @@ class TicketController extends Controller {
 
   BuildContext? _context;
 
-  @override
-  set context(BuildContext context) {
-    _context ??= context;
-  }
+  void log(String message) => print("[ Ticket Controller ]: $message");
 
   @override
-  void init() {
-    // TODO: implement init
+  void init(BuildContext context) {
+    _context = context;
+
+    log("init");
   }
 
   @override
   void builded() {
-    // TODO: implement builded
+    log("builded");
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
+    log("dispose");
   }
 }

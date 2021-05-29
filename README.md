@@ -1,6 +1,6 @@
-# mytickets
+# My Tickets
 
-A new Flutter project.
+The My Tickets is a open source project.
 
 ## Getting Started
 

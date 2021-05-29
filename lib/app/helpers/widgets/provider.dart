@@ -40,8 +40,7 @@ class _ProviderState extends State<Provider> {
   void initState() {
     super.initState();
 
-    controller.context = context;
-    controller.init();
+    controller.init(context);
 
     WidgetsBinding.instance!.addPostFrameCallback((Duration timeStamp) {
       controller.builded();

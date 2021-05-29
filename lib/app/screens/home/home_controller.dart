@@ -1,6 +1,9 @@
+/// External package
 import 'package:flutter/material.dart' show BuildContext;
+/// Internal package
 import 'package:mytickets/app/helpers/abstractions/controller.dart';
 
+/// Home Controller
 class HomeController extends Controller {
 
   BuildContext? _context;
@@ -8,17 +11,16 @@ class HomeController extends Controller {
   void log(String message) => print("[ Home Controller ]: $message");
 
   @override
-  void init() {
-    log("build");
+  void init(BuildContext context) {
+    _context = context;
+
+    log("init");
   }
 
   @override
   void builded() {
     log("builded");
   }
-
-  @override
-  set context(BuildContext context) => _context ??= context;
 
   @override
   void dispose() {
